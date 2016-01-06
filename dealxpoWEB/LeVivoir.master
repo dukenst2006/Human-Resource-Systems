@@ -1,0 +1,115 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="LeVivoir.master.cs" Inherits="LeVivoir" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder id="page_title" runat="server" >
+        </asp:ContentPlaceHolder>
+    </title>
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <link href="css/master.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="global_wrapper" >
+            <div id="header" class="" >
+                <asp:Image id="logo" ImageUrl="images/Logo_Vivoir.png" AlternateText="Logo Le Vivoir" runat="server" Width="250" Heigth="100" />
+                <asp:Image id="banner" ImageUrl="images/Banner_Vivoir.jpg" AlternateText="Piscine Le Vivoir" runat="server" Width="1000" Height="150" />
+                <h2 id="titre_application">Le Vivoir - Gestion des Ressources Humaines</h2>
+            </div>
+            
+            <div id="menu_wrapper" class="part_wrapper" >
+                <div id="nav_hor" class="nav" >
+                    <ul>
+                        <li><a class="menu_link" href="/" >Acceuil</a></li>
+                        <li><a class="menu_link" >Employé</a>
+                            <ul>
+                                <li><a class="menu_link sub_link" href="GestionEmploye.aspx" >Embaucher</a></li>
+                                <li><a class="menu_link sub_link" href="Rapport.aspx?r=payroll" >Lister</a></li>
+                                <li><a class="menu_link sub_link" href="RechercherEmploye.aspx" >Rechercher</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="menu_link" >Congé</a>
+                            <ul>
+                                <li><a class="menu_link sub_link" href="Rapport.aspx?r=conge" >Employés en Congé</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="menu_link" >Carriere</a>
+                            <ul>
+                                <li><a class="menu_link sub_link" href="Rapport.aspx?r=emploi" >Liste d'Emplois</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="menu_link" >Presence</a>
+                            <ul>
+                                <li><a class="menu_link sub_link" href="Rapport.aspx?r=presence_jour" >Journalière</a></li>
+                                <li><a class="menu_link sub_link" href="Rapport.aspx?r=presence_mois" >Mensuelle</a></li>
+                                <li><a class="menu_link sub_link" href="Rapport.aspx?r=presence_annee" >Annuelle</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="menu_link last_link" >Rapport</a>
+                            <ul>
+                                <li><a class="menu_link sub_link" href="Rapport.aspx?r=payroll" >Calculer Payroll</a></li>
+                                <li><a class="menu_link sub_link" href="Rapport.aspx?r=statut" >Employés avec Statut</a></li>
+                                <li><a class="menu_link sub_link" href="Rapport.aspx?r=effectif" >Effectif par Département</a></li>
+                                <li><a class="menu_link sub_link" href="Rapport.aspx?r=contact" >Contacts</a></li>
+                            </ul>
+                        </li>
+                        
+                    </ul>
+
+                </div>
+            </div>
+            
+            <div class="part_wrapper" >
+
+                <div id="left_content" class="aside" >
+                    <div id="nav_ver" class="nav" >
+	                    <div class="left_link_header" >
+	                        <h3>Menu Employé</h3>
+                        </div>
+                        <div class="left_link_body">
+	                        
+                            <asp:ContentPlaceHolder ID="LeftMenu" runat="server" >
+
+                            </asp:ContentPlaceHolder>
+	                        
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div id="main_content">
+                    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                        Contenu Global
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+            
+
+            <div id="footer">
+                <div class="footer_content">
+                    <p>La Gestion de Ressources Humaines est importante pour la bonne marche de l'Hôtel. 
+                        Vous pouvez télécharger le <a href="documents/Guide_Utilisateur.docx" >Manuel d'Utilisation</a>.</p>
+                </div>
+                <div class="footer_content">
+                    <p>Développé par les Etudiants de ENCADMAX :</p>
+                    <ul>
+                        <li>Robinson TABUTEAU</li>
+                        <li>Keitel JOVIN</li>
+                        <li>Figaro REYNOLD</li>
+                    </ul>
+                    <p>Le Vivoir - Tout Droit Réservé!</p>
+                </div>
+            </div>
+
+        </div>
+    </form>
+</body>
+</html>

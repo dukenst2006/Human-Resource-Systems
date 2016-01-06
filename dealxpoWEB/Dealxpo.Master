@@ -1,0 +1,105 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Dealxpo.master.cs" Inherits="dealxpoWEB.Dealxpo" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>
+        <asp:ContentPlaceHolder id="page_title" runat="server" >
+        </asp:ContentPlaceHolder>
+    </title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="dealxpo.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="subpage">
+    <form id="form1" runat="server">
+    <div id="tooplate_wrapper">
+
+	    <div id="tooplate_sidebar">
+		    <div id="site_title"><a href="#"><span>GESTION PERSONNELLE<br /><br />2015</span></a></div>
+            <br />
+            <div id="home_service">
+                <div class="home_service_box"><span class="service3"></span><h5><a href="GestionEmploye.aspx">Embaucher</a></h5>Embaucher un Employé.</div>
+			    <div class="home_service_box"><span class="service4"></span><h5><a href="RechercherEmploye.aspx">Rechercher</a></h5>Rechercher un Employé.</div>
+			    <div class="home_service_box"><span class="service5"></span><h5><a href="Rapport.aspx?r=presence_jour">Présence</a></h5>Précence des Employés.</div>
+			    <div class="home_service_box"><span class="service1"></span><h5><a href="Rapport.aspx?r=payroll">Payroll</a></h5>Effectuer des payrolls.</div>
+                <div class="home_service_box"><span class="service2"></span><h5><a href="Rapport.aspx?r=emploi">Rapport</a></h5>
+                Consulter un rapport.</div>
+            </div>
+        
+        <div class="sidebar_box">
+        	
+            <div class="cleaner"></div>
+       </div>
+        
+      	<div class="sidebar_box sbb_last">
+            <strong>Dealxpo</strong><br />
+            Rue Robin Bois Verna,P-au-P,Haïti<br />
+            Email: info@dealxpo.com <br />
+            Tel:(509) 28116464 <br />
+        	<b>Email:</b> <a href="mailto:info@yoursite.com">info@dealxpo.com</a>
+			<div class="cleaner"></div>
+			<br />Développé par: <strong>Dukens & Woody</strong>			
+		</div>
+	</div> <!-- end of sidebar -->
+  <div id="tooplate_main">
+    	
+        <div id="tooplate_menu">
+            <ul>
+				<li><a href="Rapport.aspx?r=payroll" class="current">Employé</a></li>
+                <li><a href="Rapport.aspx?r=conge">Congé</a></li>
+                <li><a href="Rapport.aspx?r=emploi">Carriere</a></li>
+				<li><a href="contact.html#">Contact</a></li>
+                <li><a href="gallery.html#">Dealxpo</a></li>
+                
+            </ul>    	
+       </div>
+                <!-- end of tooplate_menu -->
+   
+                <div id="content_title_box">
+	                
+                             <!---<asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server" >--->
+                            <!----<h2>Main Containt</h2> ---->
+			                <p>Gestion Employé. </p>
+                            <!---- </asp:ContentPlaceHolder> -->
+                                   
+                 </div>
+                 <div id="tooplate_content">
+          
+                     <div class="col_w300 float_r">
+                         <!-- start of sidebar right -->
+                         
+                          <asp:ContentPlaceHolder ID="LeftMenu" runat="server" >
+                                     <!-- Menu Right -->
+                          </asp:ContentPlaceHolder>
+                     </div><!-- end of sidebar right -->
+ <!---               <div class="cleaner h40"></div> --->
+                    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                    <!--Contenu --->
+                    </asp:ContentPlaceHolder>
+                   
+                </div>   <!-- FAUTE ----A VOIR -->	
+          
+        </div> <!-- end of content -->
+	
+        <div class="cleaner"></div>    
+        </div><!-- end of wrapper -->
+
+<div id="tooplate_footer_wrapper">
+	<div id="tooplate_footer">
+
+        <a href="index.html">Emplyé</a> | <a href="about.html">Congé</a> | <a href="services.html">Carriére</a> | <a href="contact.html">Contact</a> | <a href="gallery.html">Dealxpo</a> <br /><br />
+        
+        Copyright © 2015 <a href="#">Dealxpo</a> - Design by: <a href="http://wwww.thelemaque-dukens.com">Dukens & Woody</a>
+		
+</div><!----
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+        
+        </asp:ContentPlaceHolder> ---->
+</div> 
+    </form>
+</body>
+</html>

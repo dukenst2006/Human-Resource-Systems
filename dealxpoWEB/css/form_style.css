@@ -1,0 +1,222 @@
+﻿
+
+#form_users{
+	margin-top:0;
+	margin:0 auto 20px;
+	padding:0;
+	float:left;
+	width:100%;
+	min-height:300px;
+	background-color:#FFFFFF;
+	border-radius:5px;
+	box-shadow:1px 3px 3px 1px #777777;
+}
+.form_register{
+	margin:5px auto;
+	width:400px;
+}
+
+.form_title {
+    width:100%;
+}
+
+.form_submit_result {
+    width:100%;
+}
+
+.form_input, .form_button{
+	margin:5px;
+	padding:0;
+	width:390px;
+	height:40px;
+	font-size:18px;
+	border-radius:5px;
+	border:1px solid #CCCCCC;
+	box-shadow:1px 3px 3px 1px #777777;
+}
+.entity_input_look{
+	height:30px;
+	font-size:14px;
+	border-radius:5px;
+	border:1px solid #CCCCCC;
+	box-shadow:1px 3px 3px 1px #777777;
+}
+.entity_input_behaviour, .form_entity_button{
+	padding:0;
+	float:right;
+	width:260px;
+
+}
+
+.form_button, .form_entity_button{
+	margin-top:20px;
+	color:#FFFFFF;
+	background-color:#222222;
+	border:1px solid #000000;
+}
+.many_input_behaviour{
+	margin-left:10px;
+	padding:0;
+	float:right;
+	width:125px;
+}
+.pair_input{
+	margin:5px 0;
+	display:inline-block;
+	width:100%;
+	
+}
+
+.pair_input .pair_span{
+	float:left;
+	display:block;
+	width:120px;
+	min-height:30px;
+	line-height:30px;
+	font-size:14px;
+	font-weight:bold;
+}
+
+.pair_span {
+    color:#333;
+}
+
+.pair_input textarea{
+	min-width:100%;
+	max-width:100%;
+	min-height:150px;
+	max-height:300px;
+}
+
+.radio_content_position{
+	float:right;
+}
+.radio_input{
+	float:left;
+	width:40px;
+}
+.radio_content{
+	float:left;
+	width:120px;
+	line-height:40px;
+}
+
+
+.session_message
+{
+	margin:5px 0;
+	display:inline-block;
+	font-size:18px;
+}
+.session_success
+{
+	background-color:#DDFFEE;
+	color:#00FF00;
+}
+.session_failure
+{
+	background-color:#FFDDEE;
+	color:#FF0000;
+}
+.session_notice
+{
+	background-color:#FFC864;
+	color:#FF640E;
+}
+
+.input_error{
+	margin-top:5px;
+	display:inline-block;
+	float:right;
+	font-size:14px;
+	background-color:#FFDDEE;
+	color:#FF0000;
+}
+
+.date_picker_container{
+	float:right;
+	display:inline-block;
+	width:260px;
+}
+.day_container{
+	margin-right:15px;
+	width:50px;
+}
+.month_container{
+	margin-right:15px;
+	width:110px;
+}
+.year_container{
+	width:70px;
+}
+.date_piece{
+	
+	float:left;
+}
+
+.date_input{
+	padding:0;
+	width:100%;
+	
+}
+
+.unexpected_message
+{
+	margin:20px 0 20px 50px;
+}
+
+
+.search_wrapper {
+    margin:10px 0 0 50px;
+    float:left;
+    width:100%;
+    
+}
+.search_input {
+    float:left;
+    width:400px;
+
+}
+
+.search_input .entity_input_behaviour {
+    width: 400px;
+}
+
+.search_submit {
+    float:left;
+    width: 250px;
+}
+
+.search_wrapper .form_entity_button {
+    float:left;
+    margin:0 0 0 20px;
+    width: 200px;
+}
+
+.resultat_recherche {
+    margin-top:30px;
+    float:left;
+    width:100%;
+}
+
+.grid_table {
+    margin:10px 0 20px 10px;
+    float:left;
+    width:98%;
+    font-size:12px;
+}
+
+.grid_table_big {
+    margin:10px 0 20px 5px;
+    float:left;
+    width:98%;
+    
+}
+
+.grid_table tr:first-child, .grid_table_big tr:first-child {
+    background-color:#770000;
+    border:#FFF;
+    color:#FFF;
+}
+
+/***** ASP NET ******/

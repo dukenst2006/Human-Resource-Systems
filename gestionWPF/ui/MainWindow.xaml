@@ -1,0 +1,151 @@
+﻿<Window Name="AppWindow" x:Class="com.levivoir.rh.ui.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mdi="clr-namespace:WPF.MDI;assembly=WPF.MDI"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        Title="Dealxpo : Gestion Personnelle" Height="600" Width="1000" WindowState="Maximized" Loaded="AppWindow_Loaded">
+    <Window.Resources>
+        <Style x:Key="StyleMenuItemHead" TargetType="{x:Type MenuItem}">
+            <Style.Triggers>
+                <Trigger Property="MenuItem.IsMouseOver" Value="True">
+                    <Setter Property="MenuItem.Background" Value="#FFFFFF" />
+                    <Setter Property="MenuItem.Foreground" Value="#0B5095" />
+                </Trigger>
+                <Trigger Property="MenuItem.IsSubmenuOpen" Value="True">
+                    <Setter Property="MenuItem.Background" Value="#0B5095" />
+                    <Setter Property="MenuItem.Foreground" Value="#FFFFFF" />
+                    <Setter Property="MenuItem.FontWeight" Value="Bold" />
+                </Trigger>
+            </Style.Triggers>
+
+            <Setter Property="MenuItem.Background" Value="#0B5095" />
+            <Setter Property="MenuItem.Foreground" Value="#FFFFFF" />
+            <Setter Property="MenuItem.MinWidth" Value="70" />
+            <Setter Property="MenuItem.FontSize" Value="14" />
+        </Style>
+
+        <Style x:Key="StyleMenuItem" TargetType="{x:Type MenuItem}">
+            <Style.Triggers>
+                <Trigger Property="MenuItem.IsMouseOver" Value="True">
+                    <Setter Property="MenuItem.Background" Value="#FFFFFF" />
+                    <Setter Property="MenuItem.Foreground" Value="#0B5095" />
+                </Trigger>
+                <!--Trigger Property="MenuItem.IsFocused" Value="True">
+                    <Setter Property="MenuItem.Background" Value="#2F639D" />
+                    <Setter Property="MenuItem.Foreground" Value="#FFFFFF" />
+                </Trigger-->
+            </Style.Triggers>
+            <Setter Property="MenuItem.Background" Value="#0B5095" />
+            <Setter Property="MenuItem.Foreground" Value="#FFFFFF" />
+        </Style>
+
+    </Window.Resources>
+    <DockPanel Name="MainDockPanel">
+
+        <Menu Name="MainMenu" DockPanel.Dock="Top" Background="#0B5095" >
+            <MenuItem Header="_File" Style="{StaticResource StyleMenuItemHead}">
+                <MenuItem Name="miRestaurerDatabase" Header="Restaurer Database" Style="{StaticResource StyleMenuItem}" Click="miRestaurerDatabase_Click" />
+                <MenuItem Name="miBackupDatabase" Header="Backup Database" Style="{StaticResource StyleMenuItem}" Click="miBackupDatabase_Click" />
+                <MenuItem Name="miQuitter" Header="Quitter" Style="{StaticResource StyleMenuItem}" Click="miQuitter_Click" />
+            </MenuItem>
+            <MenuItem Header="_Employé" Style="{StaticResource StyleMenuItemHead}">
+                <MenuItem Header="Embaucher" Style="{StaticResource StyleMenuItem}" Click="EmbaucherEmploye_Click" />
+                <MenuItem Name="miModifierEmploye" Header="Modifier" Style="{StaticResource StyleMenuItem}" IsEnabled="false" Click="miModifierEmploye_Click" />
+                <MenuItem Header="Rechercher" Style="{StaticResource StyleMenuItem}">
+                    <MenuItem x:Name="miRechercheCode" Header="Par Code" Style="{StaticResource StyleMenuItem}" Click="miRechercheCode_Click"/>
+                    <MenuItem x:Name="miRechercheNom" Header="Par Nom" Style="{StaticResource StyleMenuItem}" Click="miRechercheNom_Click"/>
+                    <!--MenuItem x:Name="miRechercheFaciale" Header="Via Reconnaissance Faciale" Style="{StaticResource StyleMenuItem}"/>
+                    <MenuItem x:Name="miRechercheDigitale" Header="Via Empreinte Digitale" Style="{StaticResource StyleMenuItem}"/-->
+                </MenuItem>
+                <MenuItem Name="miPromotionEmploye" Header="Donner une Promotion" Style="{StaticResource StyleMenuItem}" IsEnabled="false" Click="miPromotionEmploye_Click" />
+                <MenuItem Name="miTransfertEmploye" Header="Transférer" Style="{StaticResource StyleMenuItem}" IsEnabled="false" Click="miTransfertEmploye_Click" />
+                <MenuItem Name="miRevocationEmploye" Header="Révoquer" Style="{StaticResource StyleMenuItem}" IsEnabled="false" Click="miRevocationEmploye_Click" />
+            </MenuItem>
+            <MenuItem Header="_Congés" Style="{StaticResource StyleMenuItemHead}">
+                <MenuItem Name="miDemandeConge" Header="Valider Demande" Style="{StaticResource StyleMenuItem}" IsEnabled="false" Click="miDemandeConge_Click" />
+                <MenuItem Name="miRetourConge" Header="Confirmer Retour" Style="{StaticResource StyleMenuItem}" IsEnabled="false" Click="miRetourConge_Click" />
+            </MenuItem>
+            <MenuItem Header="_Payroll" Style="{StaticResource StyleMenuItemHead}">
+                <MenuItem Name="miCalculerPayroll" Header="Calculer" Style="{StaticResource StyleMenuItem}" Click="miCalculerPayroll_Click" />
+            </MenuItem>
+            <MenuItem Header="_Administration" Style="{StaticResource StyleMenuItemHead}">
+                <MenuItem Header="Rapport d'Employés" Style="{StaticResource StyleMenuItem}">
+                    <MenuItem Name="miEmployeStatut" Header="Avec Statut" Style="{StaticResource StyleMenuItem}" Click="miEmployeStatut_Click"/>
+                    <MenuItem Name="miComptageEmploye" Header="Comptage par Département" Style="{StaticResource StyleMenuItem}" Click="miComptageEmploye_Click"/>
+                    <MenuItem Name="miContactEmploye" Header="Contact" Style="{StaticResource StyleMenuItem}" Click="miContactEmploye_Click"/>
+                    <MenuItem Name="miAnniversaire" Header="Anniversaires Proches" Style="{StaticResource StyleMenuItem}" Click="miAnniversaire_Click" />
+                </MenuItem>
+                <MenuItem Header="Rapport Presence" Style="{StaticResource StyleMenuItem}">
+                    <MenuItem Name="miPresenceJour" Header="Du Jour" Style="{StaticResource StyleMenuItem}" Click="miPresenceJour_Click"  />
+                    <MenuItem Name="miPresenceMois" Header="Du Mois" Style="{StaticResource StyleMenuItem}" Click="miPresenceMois_Click"  />
+                    <MenuItem Name="miPresenceAnnee" Header="De l'Année" Style="{StaticResource StyleMenuItem}" Click="miPresenceAnnee_Click"  />
+                </MenuItem>
+                <MenuItem Name="miEmplois" Header="Nombre d'Emplois" Style="{StaticResource StyleMenuItem}" Click="miEmplois_Click"/>
+            </MenuItem>
+        </Menu>
+        
+        <Grid x:Name="LeftGrid" DockPanel.Dock="Left" Width="200" >
+             <Grid.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0" MappingMode="RelativeToBoundingBox">
+                    <GradientStop Color="#FF0B5095" Offset="0" />
+                    <GradientStop Color="#FFB4D7FA" Offset="1" />
+                </LinearGradientBrush>
+            </Grid.Background>
+                
+            <Grid x:Name="GridEmploye" Width="150" Visibility="Collapsed">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="70" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="70" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+
+                <Image Source="..\images\employe_photo.png" Grid.Row="2" />
+
+                <Label Content="Code :" Grid.Row="3" VerticalAlignment="Top" Margin="10 3" Height="16" />
+                <Label Name="lbCodeEmploye" Content="EMP-005" Grid.Row="3" Foreground="#FFF"
+                   VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="10" Height="16" />
+
+                <Label Content="Prénom :" Grid.Row="4" VerticalAlignment="Top" Margin="10 3" Height="16" />
+                <Label Name="lbPrenom" Content="Keitel" Grid.Row="4" Foreground="#FFF"
+                   VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="10" Height="16" />
+
+                <Label Content="Nom :" Grid.Row="5" VerticalAlignment="Top" Margin="10 3" Height="16" />
+                <Label Name="lbNom" Content="Jovin" Grid.Row="5" Foreground="#FFF"
+                   VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="10" Height="16" />
+
+                <Label Content="Sexe :" Grid.Row="6" VerticalAlignment="Top" Margin="10 3" Height="16" />
+                <Label Name="lbSexe" Content="M" Grid.Row="6" Foreground="#FFF"
+                   VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="10" Height="16" />
+
+                <Label Content="Département :" Grid.Row="7" VerticalAlignment="Top" Margin="10 3" Height="16" />
+                <Label Name="lbDepartement" Content="Direction Generale" Grid.Row="7" Foreground="#FFF"
+                   VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="10" Height="16" />
+
+                <Label Content="Poste / Grade :" Grid.Row="8" VerticalAlignment="Top" Margin="10 3" Height="16" />
+                <Label Name="lbPoste" Content="Directeur General / A" Grid.Row="8" Foreground="#FFF"
+                   VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="10" Height="16" />
+
+            </Grid>
+
+            <Image Source="../images/Logo_Vivoir.png" Height="50" Width="180" VerticalAlignment="Bottom" Margin="0 0 0 20" />
+            
+        </Grid>
+        
+        <mdi:MdiContainer Name="MainMdiContainer" Theme="Aero"  DockPanel.Dock="Top" Margin="0 0 0 0">
+            <mdi:MdiContainer.Background>
+                <ImageBrush ImageSource="..\images\wall_mdi_container.jpg" />
+            </mdi:MdiContainer.Background>
+            
+        </mdi:MdiContainer>
+        
+
+    </DockPanel>
+</Window>

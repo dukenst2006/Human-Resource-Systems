@@ -1,0 +1,7 @@
+C:\Users\Duk\Documents\projet\dealxpo\dealxpoWEB\obj\Debug\dealxpoWEB.csprojResolveAssemblyReference.cache
+C:\Users\Duk\Documents\projet\dealxpo\dealxpoWEB\bin\dealxpoWEB.dll
+C:\Users\Duk\Documents\projet\dealxpo\dealxpoWEB\bin\dealxpoWEB.pdb
+C:\Users\Duk\Documents\projet\dealxpo\dealxpoWEB\bin\dealxpo.dll
+C:\Users\Duk\Documents\projet\dealxpo\dealxpoWEB\bin\dealxpo.pdb
+C:\Users\Duk\Documents\projet\dealxpo\dealxpoWEB\obj\Debug\dealxpoWEB.dll
+C:\Users\Duk\Documents\projet\dealxpo\dealxpoWEB\obj\Debug\dealxpoWEB.pdb

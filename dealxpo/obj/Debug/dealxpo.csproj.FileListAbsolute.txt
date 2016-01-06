@@ -1,0 +1,4 @@
+C:\Users\Duk\Documents\projet\dealxpo\dealxpo\bin\Debug\dealxpo.dll
+C:\Users\Duk\Documents\projet\dealxpo\dealxpo\bin\Debug\dealxpo.pdb
+C:\Users\Duk\Documents\projet\dealxpo\dealxpo\obj\Debug\dealxpo.dll
+C:\Users\Duk\Documents\projet\dealxpo\dealxpo\obj\Debug\dealxpo.pdb

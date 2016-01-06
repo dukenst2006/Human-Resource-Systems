@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dealxpo", "dealxpo\dealxpo.csproj", "{1FCDCB7C-B5DB-4D76-B1B2-841E43103E49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gestionWPF", "gestionWPF\gestionWPF.csproj", "{2009F369-1891-4C38-9267-37EDD36C66FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dealxpoWEB", "dealxpoWEB\dealxpoWEB.csproj", "{37479F55-880E-42E4-BA97-89ABACF247DA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1FCDCB7C-B5DB-4D76-B1B2-841E43103E49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FCDCB7C-B5DB-4D76-B1B2-841E43103E49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FCDCB7C-B5DB-4D76-B1B2-841E43103E49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FCDCB7C-B5DB-4D76-B1B2-841E43103E49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2009F369-1891-4C38-9267-37EDD36C66FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2009F369-1891-4C38-9267-37EDD36C66FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2009F369-1891-4C38-9267-37EDD36C66FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2009F369-1891-4C38-9267-37EDD36C66FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37479F55-880E-42E4-BA97-89ABACF247DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37479F55-880E-42E4-BA97-89ABACF247DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37479F55-880E-42E4-BA97-89ABACF247DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37479F55-880E-42E4-BA97-89ABACF247DA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
